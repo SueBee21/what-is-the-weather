@@ -1,0 +1,54 @@
+body {
+    background-image: url("cloud.png");
+    background-size: 2000px;
+}
+
+#dashboard {
+    background-color: darkgrey;
+    color: white;
+    text-align: center;
+
+    /* css for search box */
+    
+}
+
+#left-side {
+}
+
+  /* Style the search field */
+  input {
+    padding: 8px;
+    font-size: 12px;
+    float: left;
+  }
+  
+  /* Style the submit button */
+  button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: blue;
+    color: white;
+    font-size: 10px;
+    border-left: none; 
+  }
+  
+button:hover {
+    background: lightblue;
+  }
+
+
+  .list-group {
+      float: left;
+  }
+
+  /* right side */
+  #right-side {
+      float: left;
+
+  }
+
+  .card {
+      border-style: solid;
+      border-color: silver;
+  }

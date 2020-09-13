@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" id="dashboard">
+            <div class="col-sm-12">
+                <h1>Weather Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <!--left side  -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-3" id="left-side">
+                <h2>Search for a City:</h2>
+                <!-- bootstrap search -->
+                <form class="search-box" action="">
+                    <input type="text" placeholder="Search.." name="search" id="my-search">
+                    <button id="submit-button"><i class="fa fa-search"></i></button>
+                </form>
+                <!-- end bootstrap search -->
+                <br>
+                <!-- bootrtrap list -->
+                <div class="list-group" >
+                    <a href="#" class="list-group-item list-group-item-action" class="history"></a>
+                </div>
+                <!--  end bootsrtap lis -->
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-9" id="right-side">
+                <!-- bootstrap -->
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 id="my-city">MyCity</h5>
+                                <p id="my-temp" class="mb-2 text-muted">Temperature:</p>
+                                <p id="my-humidity" class="mb-2 text-muted">Humidity:</p>
+                                <p id="my-wind" class="mb-2 text-muted">Wind Speed:</p>
+                                <p id="my-uv" class="mb-2 text-muted">UV Index:</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 day forecast -->
+                <div class="row">
+                    <div class="col">
+                           <h3>5-Day Forecast</h3> 
+                    </div>
+                </div>
+                <!-- 5 day visual -->
+                <div class="row">
+                    <div class="col">
+                        <p>box</p>
+                    </div>
+                    <div class="col">
+                        <p>box</p>
+                    </div>
+                    <div class="col">
+                        <p>box</p>
+                    </div>
+                    <div class="col">
+                        <p>box</p>
+                    </div>
+                    <div class="col">
+                        <p>box</p>
+                    </div>
+                </div>
+
+                <!-- end bootsrtap -->
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
+<!-- 
+GIVEN a weather dashboard with form inputs
+WHEN I search for a city
+THEN I am presented with current and future conditions for that city and that city is added to the search history
+WHEN I view current weather conditions for that city
+THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+WHEN I view the UV index
+THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+WHEN I view future weather conditions for that city
+THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
+WHEN I click on a city in the search history
+THEN I am again presented with current and future conditions for that city
+WHEN I open the weather dashboard
+THEN I am presented with the last searched city forecast
+``` -->
