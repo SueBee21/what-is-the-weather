@@ -94,5 +94,6 @@ var icon;
 
 $("h5").html(myCity);
 $("#weather-icon").html(icon);
+$("a").html(myCity);
 
 

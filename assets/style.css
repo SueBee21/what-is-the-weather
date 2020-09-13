@@ -12,8 +12,6 @@ body {
     
 }
 
-#left-side {
-}
 
   /* Style the search field */
   input {
@@ -40,6 +38,7 @@ button:hover {
 
   .list-group {
       float: left;
+      clear: both;
   }
 
   /* right side */
