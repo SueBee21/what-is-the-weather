@@ -52,3 +52,14 @@ button:hover {
       border-style: solid;
       border-color: silver;
   }
+
+  /* my-uv  */
+  .fair {
+    background-color: green;
+  }
+  .moderate {
+      background-color: orange;
+  }
+  .severe {
+      background-color: red;
+  }
