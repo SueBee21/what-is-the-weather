@@ -77,6 +77,7 @@ console.log(icon);
         console.log(myUv);
         $("#my-uv").html("UV Index: " + myUv);
         // 0-2 low, 3-7 moderate ,8+ very high  epa.gov
+
     })
 });
 
@@ -95,5 +96,15 @@ var icon;
 $("h5").html(myCity);
 $("#weather-icon").html(icon);
 $("a").html(myCity);
+
+if (myUv < 3) {
+    $("#my-uv").addClass("fair")
+};
+if (myUv => 3) {
+    $("#my-uv").addClass("moderate")
+};
+if (myUv > 8) {
+  $("#my-uv").addClass("severe")
+};
 
 
