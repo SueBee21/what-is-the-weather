@@ -55,10 +55,13 @@ button:hover {
   /* my-uv  */
   .fair {
     background-color: green;
+    color: white;
   }
   .moderate {
       background-color: orange;
+      color: white;
   }
-  .severe {
+ .severe {
       background-color: red;
+      color: white;
   }
