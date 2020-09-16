@@ -12,18 +12,19 @@
 * Search city is saved in search history on the left-hand side of the page, for easy access by the user at a later time. 
 
 ## Project Development Link :
-* 
+* https://github.com/SueBee21/what-is-the-weather
 
 ## Project Site:
-* 
+* https://suebee21.github.io/what-is-the-weather/
 
 * Image of Deployed Site:
+![Screen Shot 2020-09-16 at 6 28 50 PM (2)](https://user-images.githubusercontent.com/68358265/93399008-a784fb80-f84a-11ea-958d-48e76bfae756.png)
 
 
 ## Credits: 
 * Bootstrap components were utilized in this project.  www.getbootstrap.com  
 * JQuery was utilized for this project.  https://jquery.com/
-* Open Weather Map API was used to access weather data. https://openweathermap.org/api
+* Open Weather API was used to access weather data. https://openweathermap.org/api
 * United States Enviornmental Protection Agency (EPA) website was utilized to research UV severity guidelines. www.epa.gov
 * Assistance was received from W3Schools website www.w3schools.com   
 
