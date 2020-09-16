@@ -3,6 +3,7 @@
 var myCity;
 var cityName;
 
+
 // se;ect submit button and set click
 var submitButton = $("#submit-button");
 // submitButton.addEventListener("click", displayCity());
@@ -15,7 +16,7 @@ submitButton.on("click", function () {
     // var myCity = $(this).attr("#my-search");
     localStorage.setItem("keyCity", myCity);
     localStorage.getItem("keyCity")
-    $(".history").text(myCity);
+    $("#history").text(myCity);
     $("#my-city").text(myCity);
 
     console.log(myCity);
@@ -83,42 +84,34 @@ submitButton.on("click", function () {
     });
 });
 
-// submitButton.on("click", function () {
-//     event.preventDefault();
 
-// });
-
-
-
-
-// test vat
-// var myCity = "New Haven";
-
-
-
-// api
-
-
-
+// api 5 day forecast
+var apiKey = "1bf3c720e5b6cf2622ee8bd1f82b9ad5";
+var placeholderCity = "New Haven";
 $.ajax({
-    url: "https://api.openweathermap.org/data/2.5/forecast?q=" + myCity + "&appid=" + apiKey,
+    url: "https://api.openweathermap.org/data/2.5/forecast?q=" + placeholderCity + "&&units=imperial&appid=" + apiKey,
     method: "GET"
 }).then(function (fiveDayResult) {
     console.log(fiveDayResult);
+    console.log(fiveDayResult.list[0].main.temp);
+    var dayOneTemp = fiveDayResult.list[0].main.temp;
+    console.log(dayOneTemp);
+    var dayOneHumidity = fiveDayResult.list[0].main.humidity;
+    console.log(dayOneHumidity);
+    var fiveDayIcon = fiveDayResult.list[0].weather.icon;
+    var fiveIcon = "http://openweathermap.org/img/w/" + fiveDayIcon + ".png";
+    console.log(fiveIcon);
+
+    // send to html
+    // day1
+    $("#day1-temp").html("Temperature: " + dayOneTemp);
+    $("#day1-humidity").html("Humidity: " + dayOneHumidity);
+    $("#day1-icon").html(fiveDayIcon);
+    
 });
 
 
 
-var icon;
-
-
-$("h5").html(myCity);
-
-
-
-
-
-$("a").html(myCity);
 
 
 
