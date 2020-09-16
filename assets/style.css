@@ -6,10 +6,7 @@ body {
 #dashboard {
     background-color: darkgrey;
     color: white;
-    text-align: center;
-
-    /* css for search box */
-    
+    text-align: center; 
 }
 
 
@@ -34,7 +31,6 @@ body {
 button:hover {
     background: lightblue;
   }
-
 
   .list-group {
       float: left;
@@ -64,4 +60,11 @@ button:hover {
  .severe {
       background-color: red;
       color: white;
+  }
+
+  /* 5 day boxes */
+  .five-day-box {
+    background-color: white;
+    border-style: solid;
+    border-color: silver;
   }

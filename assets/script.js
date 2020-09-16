@@ -93,16 +93,33 @@ submitButton.on("click", function () {
             console.log(dayOneTemp);
             var dayOneHumidity = fiveDayResult.list[0].main.humidity;
             console.log(dayOneHumidity);
-            var fiveDayIcon = fiveDayResult.list[0].weather.icon;
-            var fiveIcon = "http://openweathermap.org/img/w/" + fiveDayIcon + ".png";
-            console.log(fiveIcon);
+            // var fiveDayIcon = fiveDayResult.list[0].weather.icon;
+            // var fiveIcon = "http://openweathermap.org/img/w/" + fiveDayIcon + ".png";
+            // console.log(fiveIcon);
+
         
             // send to html
-            // day1
-            $("#day1-temp").html("Temperature: " + dayOneTemp);
-            $("#day1-humidity").html("Humidity: " + dayOneHumidity);
-            $("#day1-icon").html(fiveDayIcon);
+            // day +1
+            $("#day1-temp").html("Temperature: " + fiveDayResult.list[8].main.temp);
+            $("#day1-humidity").html("Humidity: " + fiveDayResult.list[8].main.humidity);
+            // $("#day1-icon").html(fiveDayIcon);
         
+            // day +2
+            $("#day2-temp").html("Temperature: " + fiveDayResult.list[16].main.temp);
+            $("#day2-humidity").html("Humidity: " + fiveDayResult.list[16].main.humidity);
+
+            // day + 3
+            $("#day3-temp").html("Temperature: " + fiveDayResult.list[24].main.temp);
+            $("#day3-humidity").html("Humidity: " + fiveDayResult.list[24].main.humidity);
+
+            // day + 4
+            $("#day4-temp").html("Temperature: " + fiveDayResult.list[32].main.temp);
+            $("#day4-humidity").html("Humidity: " + fiveDayResult.list[32].main.humidity);
+
+            // day + 5
+            $("#day5-temp").html("Temperature: " + fiveDayResult.list[39].main.temp);
+            $("#day5-humidity").html("Humidity: " + fiveDayResult.list[39].main.humidity);
+
         });
 
     });
