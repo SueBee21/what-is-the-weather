@@ -25,7 +25,9 @@
 * Bootstrap components were utilized in this project.  www.getbootstrap.com  
 * JQuery was utilized for this project.  https://jquery.com/
 * Open Weather API was used to access weather data. https://openweathermap.org/api
+* Moment JS library was utilized for this project to capture current date. https://momentjs.com/ 
 * United States Enviornmental Protection Agency (EPA) website was utilized to research UV severity guidelines. www.epa.gov
 * Assistance was received from W3Schools website www.w3schools.com   
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./assets.license.txt)

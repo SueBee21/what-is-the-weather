@@ -49,12 +49,13 @@
                     <div class="col">
                         <div class="card">
                             <div class="card-body">
-                                <h5 id="my-city">My City</h5>
+                                <h2 id="current-day"></h2>
+                                <h3 id="my-city"></h3>
                                 <img src="" class="weather-icon"></img>
-                                <p id="my-temp" class="mb-2 text-muted">Temperature:</p>
-                                <p id="my-humidity" class="mb-2 text-muted">Humidity:</p>
-                                <p id="my-wind" class="mb-2 text-muted">Wind Speed:</p>
-                                <p id="my-uv">UV Index:</p>
+                                <p id="my-temp" class="mb-2 text-muted"></p>
+                                <p id="my-humidity" class="mb-2 text-muted"></p>
+                                <p id="my-wind" class="mb-2 text-muted"></p>
+                                <p id="my-uv"></p>
                             </div>
                         </div>
                     </div>
@@ -67,27 +68,27 @@
                 </div>
                 <!-- 5 day visual -->
                 <div class="row" class="card">
-                    <div class="col" class="five-day-box">
+                    <div class="col-sm-2 col-md-2 col-lg-2" class="five-day-box">
                         <p id= "day1-temp"></p>
                         <p id= "day1-humidity"></p>
                         <p id="day1-icon"></p>
                     </div>
-                    <div class="col" class="five-day-box">
+                    <div class="col-sm-2 col-md-2 col-lg-2" class="five-day-box">
                         <p id= "day2-temp"></p>
                         <p id= "day2-humidity"></p>
                         <p id="day2-icon"></p>
                     </div>
-                    <div class="col" class="five-day-box">
+                    <div class="col-sm-2 col-md-2 col-lg-2" class="five-day-box">
                         <p id= "day3-temp"></p>
                         <p id= "day3-humidity"></p>
                         <p id="day3-icon"></p>
                     </div>
-                    <div class="col" class="five-day-box">
+                    <div class="col-sm-2 col-md-2 col-lg-2" class="five-day-box">
                         <p id= "day4-temp"></p>
                         <p id= "day4-humidity"></p>
                         <p id="day4-icon"></p>
                     </div>
-                    <div class="col" class="five-day-box">
+                    <div class="col-sm-2 col-md-2 col-lg-2" class="five-day-box">
                         <p id= "day5-temp"></p>
                         <p id= "day5-humidity"></p>
                         <p id="day5-icon"></p>
@@ -101,22 +102,8 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 
 </html>
-<!-- 
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-WHEN I open the weather dashboard
-THEN I am presented with the last searched city forecast
-``` -->

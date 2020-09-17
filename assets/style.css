@@ -4,7 +4,7 @@ body {
 }
 
 #dashboard {
-    background-color: darkgrey;
+    background-color: rgb(18, 18, 97);
     color: white;
     text-align: center; 
 }
@@ -23,7 +23,7 @@ body {
     width: 20%;
     padding: 10px;
     background: blue;
-    color: white;
+    color: whitesmoke;
     font-size: 10px;
     border-left: none; 
   }
@@ -63,8 +63,7 @@ button:hover {
   }
 
   /* 5 day boxes */
-  .five-day-box {
-    background-color: white;
-    border-style: solid;
-    border-color: silver;
-  }
+div.col-sm-2.col-md-2.col-lg-2 {
+  background-color: whitesmoke;
+  font-size: small;
+}

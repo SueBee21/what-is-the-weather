@@ -2,6 +2,8 @@
 
 var myCity;
 var cityName;
+var today = moment().format('MMMM Do YYYY');
+$("#current-day").text(today);
 
 // se;ect submit button and set click
 var submitButton = $("#submit-button");
@@ -12,10 +14,9 @@ submitButton.on("click", function () {
     event.preventDefault();
     myCity = $("#my-search").val();
 
+
     localStorage.setItem("keyCity", myCity);
     localStorage.getItem("keyCity")
-    $("#history").text(myCity);
-    $("#my-city").text(myCity);
 
     console.log(myCity);
 
@@ -30,7 +31,9 @@ submitButton.on("click", function () {
         // city name
         console.log(results.name);
         cityName = results.name;
-        console.log(cityName);
+
+        $("#history").text(cityName);
+        $("#my-city").text(cityName);
 
         // temp
         var myTemp = results.main.temp;
@@ -97,13 +100,13 @@ submitButton.on("click", function () {
             // var fiveIcon = "http://openweathermap.org/img/w/" + fiveDayIcon + ".png";
             // console.log(fiveIcon);
 
-        
+
             // send to html
             // day +1
             $("#day1-temp").html("Temperature: " + fiveDayResult.list[8].main.temp);
             $("#day1-humidity").html("Humidity: " + fiveDayResult.list[8].main.humidity);
             // $("#day1-icon").html(fiveDayIcon);
-        
+
             // day +2
             $("#day2-temp").html("Temperature: " + fiveDayResult.list[16].main.temp);
             $("#day2-humidity").html("Humidity: " + fiveDayResult.list[16].main.humidity);
@@ -124,6 +127,7 @@ submitButton.on("click", function () {
 
     });
 });
+
 
 
 
