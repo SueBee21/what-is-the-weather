@@ -2,10 +2,28 @@
 
 var myCity;
 var cityName;
+var storedCities = [];
 var today = moment().format('MMMM Do YYYY');
 $("#current-day").text(today);
 
-// se;ect submit button and set click
+function loadCities() {
+    if (localStorage.getItem("storedCity")) {
+        storedCities = JSON.parse(localStorage.getItem("storedCity"));
+        $("#search-history").empty();
+        for (var i = 0; i < storedCities.length; i++) {
+            var a = $("<a href='#' class='list-group-item list-group-item-action stored-city'>").text(storedCities[i]);
+            $("#search-history").append(a);
+        };
+        $(".stored-city").on("click", function(){
+            var city = $(this).text();
+            loadWeather(city);
+        })
+    };
+};
+
+loadCities();
+
+// select submit button and set click
 var submitButton = $("#submit-button");
 
 
@@ -13,12 +31,21 @@ var submitButton = $("#submit-button");
 submitButton.on("click", function () {
     event.preventDefault();
     myCity = $("#my-search").val();
+    if (myCity.length > 0) {
+        storedCities.push(myCity);
+        localStorage.setItem("storedCity", JSON.stringify(storedCities));
+    }
+    else {
+        alert("You must enter a city name")
+    };
+
+    loadWeather(myCity);
+
+});
 
 
-    localStorage.setItem("keyCity", myCity);
-    localStorage.getItem("keyCity")
-
-    console.log(myCity);
+function loadWeather(myCity) {
+    loadCities();
 
     // weather api
     var apiKey = "1bf3c720e5b6cf2622ee8bd1f82b9ad5";
@@ -96,16 +123,17 @@ submitButton.on("click", function () {
             console.log(dayOneTemp);
             var dayOneHumidity = fiveDayResult.list[0].main.humidity;
             console.log(dayOneHumidity);
-            // var fiveDayIcon = fiveDayResult.list[0].weather.icon;
-            // var fiveIcon = "http://openweathermap.org/img/w/" + fiveDayIcon + ".png";
-            // console.log(fiveIcon);
+
+            var fiveDayIcon = fiveDayResult.list[0].weather[0].icon;
+            var fiveIcon = "http://openweathermap.org/img/w/" + fiveDayIcon + ".png";
+            console.log(fiveIcon);
 
 
             // send to html
             // day +1
             $("#day1-temp").html("Temperature: " + fiveDayResult.list[8].main.temp);
             $("#day1-humidity").html("Humidity: " + fiveDayResult.list[8].main.humidity);
-            // $("#day1-icon").html(fiveDayIcon);
+            $("#day1-icon").attr("src", fiveIcon);
 
             // day +2
             $("#day2-temp").html("Temperature: " + fiveDayResult.list[16].main.temp);
@@ -126,10 +154,8 @@ submitButton.on("click", function () {
         });
 
     });
-});
 
-
-
+}
 
 
 
