@@ -107,6 +107,8 @@ function loadWeather(myCity) {
 
             // send to html
             // day +1
+            var dayPlus1 = moment().add(1, 'days').calendar(); 
+            $("#day1-date").text(dayPlus1);
             $("#day1-temp").html("Temperature: " + fiveDayResult.list[8].main.temp);
             $("#day1-humidity").html("Humidity: " + fiveDayResult.list[8].main.humidity);
 
@@ -115,6 +117,8 @@ function loadWeather(myCity) {
             $("#day1-icon").attr("src", iconURL1);
 
             // day +2
+            var dayPlus2 = moment().add(2, 'days').calendar(); 
+            $("#day2-date").text(dayPlus2);
             $("#day2-temp").html("Temperature: " + fiveDayResult.list[16].main.temp);
             $("#day2-humidity").html("Humidity: " + fiveDayResult.list[16].main.humidity);
             var iconTwo = fiveDayResult.list[16].weather[0].icon;
@@ -123,6 +127,8 @@ function loadWeather(myCity) {
 
 
             // day + 3
+            var dayPlus3 = moment().add(3, 'days').calendar(); 
+            $("#day3-date").text(dayPlus3);
             $("#day3-temp").html("Temperature: " + fiveDayResult.list[24].main.temp);
             $("#day3-humidity").html("Humidity: " + fiveDayResult.list[24].main.humidity);
             var iconThree = fiveDayResult.list[24].weather[0].icon;
@@ -131,6 +137,8 @@ function loadWeather(myCity) {
 
 
             // day + 4
+            var dayPlus4 = moment().add(4, 'days').calendar(); 
+            $("#day4-date").text(dayPlus4);
             $("#day4-temp").html("Temperature: " + fiveDayResult.list[32].main.temp);
             $("#day4-humidity").html("Humidity: " + fiveDayResult.list[32].main.humidity);
             var iconFour = fiveDayResult.list[32].weather[0].icon;
@@ -139,6 +147,8 @@ function loadWeather(myCity) {
             console.log(iconurl4);
 
             // day + 5
+            var dayPlus5 = moment().add(5, 'days').calendar(); 
+            $("#day5-date").text(dayPlus5);
             $("#day5-temp").html("Temperature: " + fiveDayResult.list[39].main.temp);
             $("#day5-humidity").html("Humidity: " + fiveDayResult.list[39].main.humidity);
             var iconFive = fiveDayResult.list[39].weather[0].icon;
